@@ -4,7 +4,7 @@ const express = require("express");
 const session = require("express-session");
 
 const auth = require("./routes/auth");
-const product = require("./routes/product");
+const productRoutes = require("./routes/product");
 const User = require("./models/User");
 
 const app = express();
@@ -18,7 +18,7 @@ app.use(session({
 }));
 
 app.use("/api", auth);
-app.use("/api", product);
+app.use("/api", productRoutes);
 
 /* CREAR USUARIO POR DEFECTO */
 const defaultEmail = "admin@gmail.com";

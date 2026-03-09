@@ -16,6 +16,6 @@ const product = {
             res.json(product);
         });
     }
-}; 
+};
 
 module.exports = product;
